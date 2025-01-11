@@ -1,0 +1,103 @@
+/* Container Principal */
+.essencia-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px; /* Adiciona espaço entre o componente e o footer */
+  }
+  
+  .essencia-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00509e;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  /* Grid Responsivo */
+  .essencia-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Divisão em 12 colunas */
+    grid-auto-rows: 300px; /* Altura base */
+    gap: 0; /* Remove o espaçamento entre os itens */
+    width: 100%;
+  }
+  
+  /* Itens do Grid */
+  .essencia-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Efeito de Escurecimento */
+  .essencia-item:hover {
+    filter: brightness(70%); /* Escurece a imagem ao passar o mouse */
+  }
+  
+  /* Itens Grandes */
+  .essencia-item.large {
+    grid-column: span 8; /* Ocupa 8 colunas */
+    grid-row: span 2; /* Ocupa 2 linhas */
+    height: 600px; /* Altura maior */
+  }
+  
+  /* Itens Médios */
+  .essencia-item.medium {
+    grid-column: span 4; /* Ocupa 4 colunas */
+    grid-row: span 1; /* Ocupa 1 linha */
+  }
+  
+  /* Overlay e Texto */
+  .essencia-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .essencia-overlay h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+ /* Responsividade */
+@media (max-width: 768px) {
+    .essencia-grid {
+      grid-template-columns: 1fr; /* Apenas 1 coluna em telas menores */
+      grid-auto-rows: auto; /* Altura automática para se ajustar ao conteúdo */
+    }
+  
+    .essencia-item.large,
+    .essencia-item.medium {
+      grid-column: span 1; /* Ocupa toda a largura */
+      grid-row: auto; /* Ajusta dinamicamente a altura */
+      height: 300px; /* Altura padrão */
+    }
+  
+    /* Remove espaços verticais visíveis */
+    .essencia-item {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .essencia-grid {
+      grid-template-columns: 1fr; /* Apenas 1 coluna */
+      gap: 0; /* Remove qualquer espaço entre os itens */
+    }
+  
+    .essencia-item.large,
+    .essencia-item.medium {
+      height: 250px; /* Altura ajustada para telas pequenas */
+    }
+  }
+ 

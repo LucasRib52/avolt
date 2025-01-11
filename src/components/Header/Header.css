@@ -1,0 +1,242 @@
+/* Header geral */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif; /* Fonte moderna */
+}
+
+/* Estilo para a logo */
+.logo img {
+  max-height: 50px; /* Ajustado para não cortar no mobile */
+  object-fit: contain;
+  cursor: pointer;
+  margin-bottom: 0; /* Remove qualquer espaçamento extra */
+}
+
+/* Barra de navegação */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Espaçamento maior entre os links */
+}
+
+.nav a,
+.dropdown-toggle {
+  text-decoration: none;
+  color: #333333; /* Cor inicial do texto */
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+/* Hover nos links: só o texto fica azul */
+.nav a:hover,
+.dropdown-toggle:hover {
+  color: #0044cc; /* Azul no hover */
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  text-align: center;
+}
+
+.dropdown-toggle {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: #333;
+  transition: color 0.3s ease; /* Transição suave no hover */
+}
+
+.dropdown-toggle:hover {
+  color: #0044cc; /* Azul no hover */
+}
+
+.arrow {
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+/* Seta girando ao abrir */
+.arrow.open {
+  transform: rotate(180deg); /* Gira para cima */
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha os itens à esquerda */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 10px 0; /* Espaçamento interno */
+  position: absolute;
+  top: 40px; /* Abaixo do botão */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%) scaleY(0); /* Inicialmente colapsado */
+  transform-origin: top; /* Animação de cima para baixo */
+  opacity: 0; /* Invisível inicialmente */
+  transition: all 0.3s ease; /* Transição suave ao abrir/fechar */
+  z-index: 1000; /* Garante que fique acima dos outros elementos */
+}
+
+/* Dropdown ao abrir */
+.dropdown-menu.show {
+  display: flex;
+  opacity: 1;
+  transform: translateX(-50%) scaleY(1); /* Expande verticalmente */
+}
+
+/* Links do dropdown */
+.dropdown-menu a {
+  font-size: 16px;
+  padding: 10px 15px; /* Espaçamento interno */
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+  border-radius: 4px; /* Bordas arredondadas para os links */
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0; /* Fundo claro ao passar o mouse */
+  color: #0044cc; /* Azul no hover */
+}
+
+/* Menu hambúrguer para dispositivos móveis */
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Exibir ícone do menu hambúrguer */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Navegação no mobile */
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: calc(100%); /* Posiciona exatamente abaixo da logo */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Para garantir que esteja acima de tudo */
+    padding: 0; /* Remove padding que cria a linha */
+    gap: 15px; /* Espaço entre os links */
+    transition: all 0.3s ease;
+    overflow-y: auto; /* Evitar cortes */
+  }
+
+  .nav.nav-mobile-open {
+    display: flex;
+  }
+
+  /* Links no mobile */
+  .nav a {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav a:hover {
+    color: #0044cc;
+  }
+
+  /* Dropdown menu no mobile */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dropdown-menu a {
+    text-align: left; /* Alinha links à esquerda */
+    padding: 8px 10px;
+    width: 100%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .dropdown-menu {
+    position: absolute;
+    top: 40px; /* Ajusta a posição vertical */
+    left: 0; /* Alinha à esquerda do botão */
+    width: auto; /* Ajusta automaticamente à largura dos itens */
+    padding: 10px 15px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transform: translateY(-10px) scale(0.95); /* Animação inicial */
+    transform-origin: top; /* Origem da animação */
+    opacity: 0; /* Começa invisível */
+    transition: all 0.3s ease; /* Transição suave */
+    z-index: 1000;
+  }
+
+  /* Dropdown ao abrir no Desktop */
+  .dropdown-menu.show {
+    opacity: 1; /* Visível */
+    transform: translateY(0) scale(1); /* Cresce suavemente */
+  }
+
+  .dropdown-menu a {
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 16px;
+    padding: 8px 10px; /* Ajuste interno dos links */
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0; /* Fundo claro no hover */
+    color: #0044cc; /* Azul no hover */
+  }
+}

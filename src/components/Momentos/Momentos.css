@@ -1,0 +1,452 @@
+/* Container principal */
+.momentos-container {
+    font-family: 'Roboto', sans-serif; /* Tipografia moderna e profissional */
+    color: #333;
+    background: #f9f9f9;
+    padding: 20px 5%;
+  }
+  
+  /* Cabeçalho com imagem de fundo */
+  .momentos-header {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("../../assets/imgteste.jpg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .header-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .header-overlay p {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #f0f0f0;
+  }
+  
+  /* Introdução */
+  .momentos-intro {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+  }
+  
+  .momentos-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #00509e;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .momentos-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  /* Seção de vídeo */
+  .momentos-video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #eaf3ff, #dbe7f5);
+    border-radius: 10px;
+  }
+  
+  .video-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-description {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .video-description h3 {
+    font-size: 1.8rem;
+    color: #00509e;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .video-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  /* Grid de momentos detalhados */
+  .momentos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dois cards por linha */
+    gap: 30px; /* Espaçamento entre os cards */
+    margin: 40px 0;
+  }
+  
+  /* Estilo dos cards */
+  .momento-card {
+    background: #ffffff; /* Fundo branco para um visual limpo */
+    border-radius: 10px; /* Bordas arredondadas suaves */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao hover */
+    position: relative; /* Necessário para posicionar o botão corretamente */
+  }
+  .momento-card:hover {
+    transform: translateY(-5px); /* Elevação ao passar o mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Destaque adicional */
+  }
+  
+  /* Imagem do card */
+  .momento-video {
+    width: 100%;
+    height: 280px; /* Aproximando o formato quadrado */
+    object-fit: cover; /* Preenchimento sem distorção */
+    border-bottom: 4px solid #00509e; /* Divisor colorido para destacar */
+  }
+  
+  /* Conteúdo do card */
+  .momento-content {
+    padding: 20px;
+  }
+  
+  /* Texto do conteúdo do card */
+.momento-content h3 {
+  font-size: 1.6rem; /* Tamanho maior para destaque */
+  margin-bottom: 15px;
+  color: #333; /* Cor mais escura para profissionalismo */
+  font-weight: bold;
+  line-height: 1.4; /* Melhor espaçamento entre linhas */
+}
+
+.momento-content ul {
+  list-style: none; /* Remove marcadores */
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.momento-content ul li {
+  font-size: 1.1rem; /* Tamanho levemente maior para leitura */
+  margin-bottom: 12px;
+  color: #555; /* Cinza para contraste elegante */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  position: relative;
+  padding-left: 30px; /* Espaço para o ícone de marcador */
+}
+
+.momento-content ul li::before {
+  content: "•"; /* Ícone de marcador */
+  color: #00509e; /* Azul corporativo */
+  position: absolute;
+  left: 0; /* Alinha o marcador à esquerda */
+  font-size: 1.4rem; /* Tamanho maior do marcador */
+  line-height: 1; /* Centraliza verticalmente */
+}
+
+  
+  /* Botão */
+  .momento-button {
+    display: inline-block;
+    background: #00509e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .momento-button:hover {
+    background: #0078d7;
+    transform: scale(1.05); /* Pequeno efeito de zoom */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estilo do título e parágrafo em "Momentos de Sucesso" */
+.momentos-detalhados h2 {
+    font-size: 2.0rem; /* Tamanho grande para destaque */
+    color: #00509e; /* Azul corporativo */
+    text-align: center; /* Centralizado */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    font-weight: bold; /* Negrito para impacto */
+    margin-bottom: 15px; /* Espaçamento inferior */
+  }
+  
+  .momentos-detalhados p {
+    font-size: 1.3rem; /* Tamanho maior para destacar o texto */
+    text-align: center; /* Centralizado */
+    color: #666; /* Cinza elegante */
+    line-height: 1.8; /* Melhor espaçamento entre linhas */
+    max-width: 800px; /* Limita a largura para melhor leitura */
+    margin: 0 auto 40px; /* Centraliza e adiciona espaçamento inferior */
+    font-style: italic; /* Adiciona um toque elegante */
+    letter-spacing: 0.5px; /* Leve espaçamento entre letras */
+  }
+
+  /* Ajuste da altura da imagem para formato mais quadrado */
+  .momento-video {
+    height: 320px; /* Imagem mais quadrada */
+    border-bottom: 4px solid #00509e; /* Mantém o divisor */
+    object-fit: cover; /* Preenchimento sem distorção */
+  }
+
+/* Botão com seta e animação - Ajustado */
+.momento-button {
+  display: inline-block;
+  background: #00509e;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px; /* Reduzido o tamanho */
+  font-size: 0.9rem; /* Fonte menor */
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: absolute; /* Ajusta a posição relativa ao card */
+  right: 15px; /* Ajuste horizontal */
+  bottom: 15px; /* Ajuste vertical */
+}
+
+.momento-button::after {
+  content: "→";
+  font-size: 1rem; /* Mantém a seta proporcional ao botão */
+  margin-left: 6px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.momento-button:hover {
+  background: #0078d7; /* Fundo azul mais claro no hover */
+  transform: scale(1.05); /* Efeito de zoom */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.momento-button:hover::after {
+  transform: translateX(5px); /* Move a seta para a direita no hover */
+}
+
+/* Botão "Carregar Mais" estilizado com ícone e animação */
+.carregar-mais-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  background: #00509e;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  gap: 8px; /* Espaçamento entre texto e ícone */
+}
+
+.carregar-mais-button:hover {
+  background: #0078d7;
+  transform: scale(1.05); /* Efeito de zoom */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carregar-mais-button:active {
+  transform: scale(0.98); /* Efeito de clique */
+}
+
+.carregar-mais-button i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.carregar-mais-button:hover i {
+  transform: translateX(5px); /* Animação de seta movendo para a direita */
+}
+
+/* Banner Principal */
+.detalhes-banner {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Maior destaque */
+  overflow: hidden;
+  margin-bottom: 60px; /* Maior espaçamento */
+}
+
+.banner-imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px 60px; /* Mais espaçamento */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.banner-texto h1 {
+  font-size: 3.5rem; /* Texto maior */
+  font-weight: bold;
+}
+
+.banner-texto p {
+  font-size: 1.5rem; /* Subtítulo maior */
+  margin-top: 10px;
+}
+
+/* Seções com Texto e Imagem */
+.detalhes-secao {
+  padding: 60px 0; /* Maior espaçamento */
+  background: #f9f9f9;
+}
+
+.detalhes-secao.invertido {
+  background: #ffffff;
+}
+
+.conteudo-historia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px; /* Maior distância entre texto e imagem */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.texto-box {
+  flex: 1;
+  background: #ffffff;
+  padding: 40px; /* Mais espaço interno */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.texto-box h2 {
+  font-size: 2.5rem; /* Título maior */
+  color: #00509e;
+  margin-bottom: 20px;
+}
+
+.texto-box p {
+  font-size: 1.2rem; /* Texto maior */
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.imagem-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-box img {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* Aumenta o tamanho máximo da imagem */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Call to Action */
+.detalhes-cta {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #eaf3ff, #dbe7f5);
+  border-radius: 10px;
+  margin-top: 60px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.detalhes-cta h2 {
+  font-size: 2.5rem; /* Título maior */
+  color: #00509e;
+  margin-bottom: 20px;
+}
+
+.detalhes-cta p {
+  font-size: 1.5rem; /* Texto maior */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-botao {
+  background: #00509e;
+  color: white;
+  border: none;
+  padding: 20px 40px; /* Botão maior */
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-botao:hover {
+  background: #0078d7;
+  transform: scale(1.1); /* Efeito de destaque maior */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .momentos-grid {
+      grid-template-columns: 1fr; /* Apenas 1 card por linha */
+    }
+  
+    .momentos-intro p {
+      font-size: 1rem;
+    }
+  
+    .momento-content h3 {
+      font-size: 1.2rem;
+    }
+  }
+  

@@ -1,0 +1,127 @@
+/* Footer Styles */
+.footer {
+    background: linear-gradient(135deg, #003f88, #001d4a); /* Gradiente moderno e elegante */
+    color: #ffffff;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ocupa toda a largura da tela */
+    margin: 0; /* Remove margens */
+    box-sizing: border-box; /* Garante que o padding não afete o tamanho */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    gap: 2rem;
+  }
+  
+  .footer-logo-section {
+    text-align: center;
+    flex: 1;
+    position: relative;
+  }
+  
+  .footer-logo {
+    width: 150px; /* Aumentar o tamanho */
+    margin-bottom: 0.5rem;
+    background: #ffffff; /* Fundo branco para destacar a logo */
+    border-radius: 8px; /* Borda arredondada sutil */
+    padding: 10px; /* Espaço interno */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação para hover */
+  }
+  
+  .footer-logo:hover {
+    transform: scale(1.1); /* Leve zoom ao passar o mouse */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Destaque no hover */
+  }
+  
+  .footer-company-name {
+    font-size: 1.8rem; /* Tornar o texto maior */
+    font-weight: bold;
+    color: #feb300; /* Cor amarela para contraste */
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-links-section {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+    gap: 2rem;
+  }
+  
+  .footer-links-section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links-section li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .footer-links-section li:hover {
+    color: #feb300;
+  }
+  
+  .footer-social-section {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .footer-social-icons i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .footer-social-icons i:hover {
+    color: #feb300;
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    width: 100%; /* Garante que o rodapé inferior também ocupe a largura */
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-links-section {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  

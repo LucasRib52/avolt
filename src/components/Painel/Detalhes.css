@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth; /* Garante a suavidade na rolagem */
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Fundo claro */
+    color: #333;
+  }
+  
+  /* Contêiner Geral */
+  .section-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  /* Seção */
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .section:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Coluna de Texto */
+  .section-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004aad; /* Azul principal */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .section-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .section-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #004aad;
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  /* Imagens */
+  .section-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .section-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .section-text {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .section-image {
+      max-width: 100%;
+    }
+  }
+  

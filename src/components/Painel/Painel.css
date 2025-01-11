@@ -1,0 +1,123 @@
+.painel-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Sempre 3 colunas */
+  gap: 25px; /* Espaçamento entre os cartões */
+  padding: 30px 5%;
+  background: linear-gradient(135deg, #eaf3ff, #dbe7f5); /* Gradiente elegante no fundo */
+  margin-top: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Leve sombra no container */
+}
+
+.painel-card {
+  background: linear-gradient(to bottom, #ffffff, #f5f9ff); /* Gradiente no cartão */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.painel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Destaque ao passar o mouse */
+}
+
+.painel-image {
+  height: 200px; /* Imagens maiores */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 5px solid #002855; /* Divisor de destaque */
+  border-radius: 15px 15px 0 0; /* Bordas arredondadas só em cima */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra da imagem */
+}
+
+.painel-content {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 0 0 15px 15px; /* Ajuste nas bordas */
+}
+
+.painel-title {
+  font-size: 1.4em;
+  color: #002855;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.2px; /* Mais espaçamento nas letras */
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Leve sombra no texto */
+}
+
+.painel-description {
+  list-style: none; /* Remove os marcadores padrão */
+  padding: 0;
+  margin: 15px 0;
+  font-size: 1em;
+  color: #555; /* Cinza elegante */
+  line-height: 1.8;
+}
+
+.painel-description li {
+  margin-bottom: 8px;
+  position: relative; /* Necessário para o marcador */
+  padding-left: 20px; /* Espaço para o ponto */
+}
+
+.painel-description li::before {
+  content: '•'; /* Adiciona o ponto */
+  color: #00509e; /* Azul para o ponto */
+  font-size: 1.2em; /* Tamanho do ponto */
+  position: absolute; /* Posiciona à esquerda do texto */
+  left: 0; /* Alinha o ponto ao início */
+  top: 0.2em; /* Ajusta verticalmente */
+}
+
+.painel-button {
+  background-color: #00509e;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+.painel-button:hover {
+  background: linear-gradient(135deg, #0078d7, #00509e); /* Gradiente no hover */
+  transform: scale(1.1); /* Zoom no botão */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.painel-button:focus {
+  outline: 2px solid #00509e;
+  outline-offset: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .painel-container {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas lado a lado */
+  }
+}
+
+@media (max-width: 768px) {
+  .painel-container {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas lado a lado */
+  }
+}
+
+@media (max-width: 480px) {
+  .painel-container {
+    grid-template-columns: 1fr; /* Um cartão por linha */
+  }
+  .painel-container {
+    padding: 15px;
+  }
+}

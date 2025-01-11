@@ -1,0 +1,286 @@
+/* Configuração global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.sustainability-header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-bottom: 5px solid #0575e6;
+}
+
+.sustainability-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.header-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 15px 25px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Main */
+.sustainability-main {
+  padding: 40px 20px;
+}
+
+.about-section,
+.benefits-section,
+.features-section,
+.gallery-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #0575e6;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0575e6;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Benefícios */
+.benefits-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.benefit-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  text-align: center;
+  padding: 25px;
+  width: 250px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: #0575e6;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Funcionalidades */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.feature-item {
+  background: linear-gradient(135deg, #f0f9ff, #e6f3ff);
+  border-left: 5px solid #0575e6;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #e6f3ff, #d9efff);
+}
+
+.feature-title {
+  font-size: 1.4rem;
+  color: #0575e6;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature-content {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Galeria com Carrossel */
+.gallery-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Estilos do react-slick */
+.slick-slider {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slick-dots {
+  bottom: -25px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #0575e6;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0575e6;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  color: #0575e6;
+}
+
+
+/* Como os Painéis Ajudam */
+.interactive-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.interactive-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.interactive-item {
+  background: white;
+  border: 2px solid #0575e6;
+  padding: 20px;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.interactive-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  background: #f0f9ff;
+}
+
+.interactive-title {
+  font-size: 1.4rem;
+  color: #0575e6;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.interactive-content {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sustainability-header {
+    height: 300px;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .feature-item {
+    max-width: 100%;
+  }
+
+  .interactive-item {
+    max-width: 100%;
+  }
+}

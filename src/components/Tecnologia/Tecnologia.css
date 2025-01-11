@@ -1,0 +1,88 @@
+.tecnologia-section {
+  padding: 60px 5%; /* Mantém o espaçamento adequado */
+  background: linear-gradient(to bottom, #e9f5ff, #ffffff);
+  text-align: center;
+}
+
+.tecnologia-header h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003a78;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tecnologia-header p {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+/* Grid responsivo */
+.tecnologia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta os cartões para preencherem o espaço */
+  gap: 20px; /* Espaçamento entre os cartões */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cartões */
+.tecnologia-card {
+  text-decoration: none;
+  color: #003a78;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex; /* Garante que o conteúdo do cartão ocupe o espaço */
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  justify-content: space-between; /* Preenche todo o espaço vertical */
+}
+
+.tecnologia-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem no cartão */
+.tecnologia-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Texto no cartão */
+.tecnologia-card h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #003a78;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tecnologia-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .tecnologia-card h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tecnologia-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologia-image {
+    height: 150px;
+  }
+}

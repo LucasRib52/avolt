@@ -1,0 +1,91 @@
+.certificacao-section {
+    padding: 60px 5%;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #f4f7fc); /* Fundo moderno */
+  }
+  
+  .certificacao-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #004080; /* Azul refinado */
+    margin-bottom: 15px;
+  }
+  
+  .certificacao-description {
+    font-size: 1.4rem;
+    color: #666666;
+    margin-bottom: 40px;
+  }
+  
+  .certificacao-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .certificacao-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  }
+  
+  .certificacao-card:hover {
+    transform: translateY(-8px) scale(1.02); /* Movimento sutil */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    background-color: #eaf2ff; /* Leve tom de azul ao passar o mouse */
+  }
+  
+  .certificacao-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Leve arredondamento */
+    transition: transform 0.4s ease;
+  }
+  
+  .certificacao-card:hover .certificacao-image {
+    transform: scale(1.05); /* Zoom leve na imagem */
+  }
+  
+  .slick-dots {
+    bottom: -30px;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 12px;
+    color: #cccccc; /* Cor dos dots inativos */
+    transition: color 0.3s ease;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #004080; /* Cor do dot ativo */
+  }
+  
+  .slick-dots li {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .slick-dots li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slick-dots li.slick-active {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    font-size: 14px;
+  }
+  

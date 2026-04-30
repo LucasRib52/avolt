@@ -1,5 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./Home.css";
+import React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import image1 from "../../assets/teste1.jpg";
 import image2 from "../../assets/teste2.jpg";
@@ -8,79 +15,37 @@ import image4 from "../../assets/teste4.png";
 
 const Home = () => {
   const images = [image1, image2, image3, image4];
-  const [currentIndex, setCurrentIndex] = useState(1); // Começa na 1ª imagem "duplicada"
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Duplicamos o array para criar um loop contínuo
-  const loopedImages = [images[images.length - 1], ...images, images[0]];
-
-  // Troca automática de imagens
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const handlePrev = () => {
-    if (isTransitioning) return;
-
-    setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => prevIndex - 1);
-  };
-
-  const handleNext = () => {
-    if (isTransitioning) return;
-
-    setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => prevIndex + 1);
-  };
-
-  // Verifica se o índice precisa ser redefinido para manter o loop contínuo
-  useEffect(() => {
-    if (currentIndex === 0) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex(images.length);
-      }, 500); // Tempo da transição
-    } else if (currentIndex === loopedImages.length - 1) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex(1);
-      }, 500); // Tempo da transição
-    } else {
-      setTimeout(() => setIsTransitioning(false), 500);
-    }
-  }, [currentIndex, loopedImages.length, images.length]);
+  // Configuração do plugin Autoplay
+  const plugin = React.useRef(
+    Autoplay({ delay: 6000, stopOnInteraction: false })
+  );
 
   return (
-    <div className="home">
-      <div className="carousel">
-        <div
-          className="carousel-images"
-          style={{
-            transform: `translateX(-${currentIndex * 100}%)`,
-            transition: isTransitioning ? "transform 0.5s ease-in-out" : "none",
-          }}
-        >
-          {loopedImages.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`Slide ${index}`}
-              className="carousel-image"
-              loading="lazy"
-            />
+    <div className="w-full relative bg-slate-950 overflow-hidden group">
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full"
+        opts={{
+          loop: true,
+          align: "start",
+        }}
+      >
+        <CarouselContent className="ml-0">
+          {images.map((src, index) => (
+            <CarouselItem key={index} className="pl-0 w-full relative">
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-[80vh] md:h-[90vh] object-cover"
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            </CarouselItem>
           ))}
-        </div>
-        <button className="carousel-button prev" onClick={handlePrev}>
-          &#10094;
-        </button>
-        <button className="carousel-button next" onClick={handleNext}>
-          &#10095;
-        </button>
-      </div>
+        </CarouselContent>
+        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white text-white hover:text-slate-900 border-white/20 h-14 w-14 transition-all opacity-0 group-hover:opacity-100 hidden md:flex backdrop-blur-md" />
+        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white text-white hover:text-slate-900 border-white/20 h-14 w-14 transition-all opacity-0 group-hover:opacity-100 hidden md:flex backdrop-blur-md" />
+      </Carousel>
     </div>
   );
 };

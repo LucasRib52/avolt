@@ -62,7 +62,7 @@ const AutomacaoETelemetria = () => {
               </motion.h1>
               
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl">
-                Controle absoluto, monitoramento remoto 24/7 e dados em tempo real transformando a tomada de decisão estratégica da sua planta.
+                A automação e a telemetria permitem que sistemas elétricos e industriais operem com mais eficiência, segurança e inteligência.
               </motion.p>
             </motion.div>
           </div>
@@ -116,10 +116,10 @@ const AutomacaoETelemetria = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-400 rounded-full"></div>
                 <div className="text-lg text-slate-600 leading-relaxed font-light space-y-4">
                   <p>
-                    Deixar sua fábrica operar às cegas no interior do país não é mais uma opção. As nossas soluções de <strong>Automação e Telemetria</strong> conectam os equipamentos do chão de fábrica aos grandes centros de controle.
+                    Por meio da integração de tecnologias, é possível monitorar e controlar operações em tempo real, reduzindo falhas e otimizando processos.
                   </p>
                   <p>
-                    Transformamos dados elétricos e pneumáticos brutos em <strong>dashboards operacionais (SCADA)</strong> incrivelmente rápidos. Você poderá saber, pelo celular, se a bomba da estação 4 parou ou se a esteira está consumindo energia além do normal.
+                    A automação industrial consiste na utilização de sistemas e tecnologias para controlar processos de forma automática, reduzindo a necessidade de intervenção manual.
                   </p>
                 </div>
               </div>
@@ -147,10 +147,10 @@ const AutomacaoETelemetria = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full"></div>
                 <div className="text-lg text-slate-300 leading-relaxed font-light space-y-4">
                   <p>
-                    Implementamos a verdadeira Internet das Coisas Industrial (IIoT). Nossos CLPs se comunicam via redes blindadas por Fibra Óptica, Rádio Frequência (LoRa/UHF) ou redes 4G/5G com VPN Criptografada.
+                    A telemetria permite o monitoramento remoto de dados e equipamentos, possibilitando o acompanhamento em tempo real do consumo de energia, funcionamento de sistemas, falhas operacionais e desempenho de equipamentos.
                   </p>
                   <p>
-                    Com isso, sua equipe de engenharia toma <strong>decisões ativas antes da falha acontecer</strong> (manutenção preditiva), e atua remotamente fechando comportas ou religando disjuntores sem precisar enviar um carro até o local a quilômetros de distância.
+                    Desenvolvemos soluções personalizadas de automação e telemetria, integradas aos sistemas elétricos e adaptadas às necessidades de cada operação.
                   </p>
                 </div>
               </div>

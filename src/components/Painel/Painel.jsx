@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Zap, ShieldAlert, Settings, Cpu, Activity, Trophy } from "lucide-react";
+import { ArrowRight, CheckCircle2, Zap, ShieldAlert, Cpu, Activity } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import imgTeste from "../../assets/imgteste.jpg";
@@ -10,76 +10,52 @@ const Painel = () => {
 
   const items = [
     {
-      title: "Baixa Tensão",
+      title: "Distribuição e Controle de Energia",
       icon: Zap,
       description: [
-        "Painéis de distribuição",
-        "Painéis de comando",
-        "Banco de capacitores",
-        "Painéis certificados",
+        "Painéis de baixa tensão, média tensão e QGBT",
+        "Quadros de distribuição e painéis de transferência (ATS)",
+        "Painéis multimedidores",
+        "Painéis e quadros de comando",
       ],
       image: imgTeste,
       route: "/baixa-tensao",
     },
     {
-      title: "Média Tensão",
+      title: "Acionamento de Motores e CCM",
       icon: Activity,
       description: [
-        "Cabines tipo semi-enterrada",
-        "Cubículos convencionais",
-        "Soluções de proteção",
-        "Painéis certificados",
+        "Centros de Controle de Motores (CCM)",
+        "CCM inteligente e painéis para acionamento de motores",
+        "Inversores de frequência",
+        "Soft starters",
       ],
       image: imgTeste,
-      route: "/baixa-tensao",
+      route: "/servicos",
     },
     {
-      title: "Shelters e Eletrocentros",
+      title: "Automação e Telemetria",
       icon: ShieldAlert,
       description: [
-        "Eletrocentros customizados",
-        "Soluções modulares",
-        "Projetos turnkey",
-        "Instalações robustas e seguras",
+        "Painéis de automação",
+        "Aplicação de CLP e IHM",
+        "Sistemas de telemetria e monitoramento remoto",
+        "Integração de sistemas",
       ],
       image: imgTeste,
-      route: "/baixa-tensao",
+      route: "/automacao-e-telemetria",
     },
     {
-      title: "Automação",
+      title: "Infraestrutura, Comunicação e Energia Especial",
       icon: Cpu,
       description: [
-        "Programação de CLPs",
-        "Integração de sistemas industriais",
-        "Monitoramento remoto",
-        "Sistemas SCADA",
+        "Painéis de proteção e controle de geradores",
+        "Painéis de servidores e carregadores para veículos elétricos",
+        "Laudos técnicos",
+        "Confecção e terminação de cabos ópticos (DGO)",
       ],
       image: imgTeste,
-      route: "/baixa-tensao",
-    },
-    {
-      title: "Missão Crítica",
-      icon: Settings,
-      description: [
-        "Infraestruturas de alta confiabilidade",
-        "Soluções de redundância elétrica",
-        "Gerenciamento de energia",
-        "Projetos para data centers",
-      ],
-      image: imgTeste,
-      route: "/baixa-tensao",
-    },
-    {
-      title: "Momentos de Sucesso",
-      icon: Trophy,
-      description: [
-        "Cases de projetos realizados",
-        "Depoimentos de clientes",
-        "Histórias de inovação",
-        "Implementações bem-sucedidas",
-      ],
-      image: imgTeste,
-      route: "/momentos",
+      route: "/servicos",
     },
   ];
 
@@ -105,17 +81,17 @@ const Painel = () => {
               Nossas Especialidades
             </span>
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6"
           >
-            Soluções e Painéis
+            SERVIÇOS
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-slate-600 leading-relaxed"
           >
-            Oferecemos uma linha completa de soluções para a sua infraestrutura elétrica, garantindo segurança e eficiência energética em todos os níveis.
+            Soluções completas em engenharia elétrica para diferentes segmentos.
           </motion.p>
         </div>
 
@@ -124,7 +100,7 @@ const Painel = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           {items.map((item, index) => (
             <motion.div variants={itemVariants} key={index} className="bg-white rounded-3xl p-1 shadow-lg shadow-slate-200/50 border border-slate-100 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 group flex flex-col h-full">
@@ -158,13 +134,22 @@ const Painel = () => {
                   onClick={() => navigate(item.route)}
                   className="w-full bg-slate-50 hover:bg-blue-600 text-slate-900 hover:text-white transition-all duration-300 group/btn rounded-xl py-6 border border-slate-200 hover:border-transparent"
                 >
-                  Conhecer solução
+                  Conhecer serviço
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                 </Button>
               </div>
             </motion.div>
           ))}
         </motion.div>
+
+        <div className="mt-10 text-center">
+          <Button
+            onClick={() => navigate("/servicos")}
+            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6"
+          >
+            Conheça todos os serviços
+          </Button>
+        </div>
       </div>
     </section>
   );

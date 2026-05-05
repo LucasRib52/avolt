@@ -62,7 +62,7 @@ const EngenhariaDos5Ps = () => {
               </motion.h1>
               
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl">
-                Planejamento, Performance, Produção, Pessoas e Progresso. Descubra a metodologia que transforma processos arcaicos em excelência industrial.
+                A Engenharia dos 5Ps na Avolt vai além do projeto elétrico tradicional.
               </motion.p>
             </motion.div>
           </div>
@@ -116,10 +116,10 @@ const EngenhariaDos5Ps = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full"></div>
                 <div className="text-lg text-slate-600 leading-relaxed font-light space-y-4">
                   <p>
-                    A Engenharia dos 5Ps não é apenas uma teoria, é a estrutura mental de como projetamos cada painel, automação ou estrutura física para nossos clientes.
+                    Atuamos de forma integrada desde o planejamento até a performance final, garantindo soluções seguras, eficientes e totalmente alinhadas às normas técnicas e às necessidades operacionais do cliente.
                   </p>
                   <p>
-                    Projetada para identificar gargalos nos menores níveis operacionais, nós redesenhamos o fluxo de energia da sua planta. A meta? Reduzir desperdícios, elevar a velocidade produtiva e proteger o seu ativo mais valioso: as Pessoas.
+                    Cada projeto é desenvolvido de forma personalizada, considerando produtividade, proteção, previsibilidade de custos e performance energética, resultando em sistemas elétricos mais confiáveis, duráveis e preparados para o crescimento da operação.
                   </p>
                 </div>
               </div>
@@ -147,10 +147,7 @@ const EngenhariaDos5Ps = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
                 <div className="text-lg text-slate-300 leading-relaxed font-light space-y-4">
                   <p>
-                    Ao adotar a nossa engenharia, sua empresa abandona a cultura de apenas consertar o que quebrou, para entrar em um ciclo de <strong>melhoria contínua e medição de resultados</strong>.
-                  </p>
-                  <p>
-                    Com dashboards automatizados e decisões pautadas em estatísticas sólidas, o progresso torna-se uma consequência inevitável do seu novo ecossistema elétrico e sistêmico.
+                    Diferencial Avolt: engenharia estratégica, visão sistêmica e soluções sob medida que reduzem riscos e aumentam a eficiência do negócio.
                   </p>
                 </div>
               </div>

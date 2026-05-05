@@ -62,7 +62,7 @@ const ShelterMTTrafoBT = () => {
               </motion.h1>
               
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl">
-                Acelere o startup da sua planta em meses instalando salas elétricas completas, testadas em fábrica e 100% plug & play.
+                Os Shelters de Média Tensão e Trafo B da Avolt são projetados para oferecer robustez, confiabilidade e segurança em ambientes industriais e comerciais.
               </motion.p>
             </motion.div>
           </div>
@@ -116,10 +116,10 @@ const ShelterMTTrafoBT = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full"></div>
                 <div className="text-lg text-slate-600 leading-relaxed font-light space-y-4">
                   <p>
-                    <strong>Eletrocentros (Shelters)</strong> são estruturas em formato de contêineres construídas fora do canteiro de obras da usina ou indústria.
+                    Desenvolvemos soluções completas, com integração de equipamentos, ventilação adequada, proteção elétrica e facilidade de manutenção.
                   </p>
                   <p>
-                    Em vez de mobilizar dezenas de pedreiros e enfrentar imprevistos climáticos e regulamentações pesadas, nós montamos a sala inteira na Avolt. Ela já sai conectada, com sistemas HVAC (climatização) e automação embutidos. Basta entregar e ligar na rede.
+                    Cada shelter é fabricado sob medida, atendendo às exigências normativas e às condições específicas de operação, garantindo desempenho contínuo e proteção total dos ativos elétricos.
                   </p>
                 </div>
               </div>
@@ -147,10 +147,7 @@ const ShelterMTTrafoBT = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-indigo-400 rounded-full"></div>
                 <div className="text-lg text-slate-300 leading-relaxed font-light space-y-4">
                   <p>
-                    A Avolt é responsável pelo processo "Chave na Mão" (Turn-Key). Desde o desenho executivo, dimensionamento de painéis de Média Tensão, até as calhas e proteção contra incêndio.
-                  </p>
-                  <p>
-                    Outra grande vantagem é a <strong>Mobilidade</strong>: Caso sua mineradora, usina fotovoltaica ou parque fabril necessite mudar o layout ou migrar as instalações, os shelters são içados e movidos integralmente.
+                    Diferencial Avolt: fabricação customizada, alto padrão construtivo e engenharia pensada para máxima confiabilidade operacional.
                   </p>
                 </div>
               </div>

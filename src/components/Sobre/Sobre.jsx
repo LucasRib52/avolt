@@ -61,7 +61,7 @@ const Sobre = () => {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="text-lg md:text-xl text-slate-200 leading-relaxed font-light"
           >
-            Nossa trajetória é marcada pela busca constante da excelência, oferecendo soluções completas e customizadas em engenharia elétrica e automação industrial.
+            A Avolt Engenharia é uma empresa com mais de 12 anos de atuação no mercado, especializada em soluções em engenharia elétrica, automação e infraestrutura energética.
           </motion.p>
         </div>
       </section>
@@ -77,21 +77,21 @@ const Sobre = () => {
           >
             <motion.div variants={itemVariants} className="text-center p-10 rounded-3xl bg-white shadow-xl shadow-slate-200/50 border border-slate-100 hover:border-blue-200 transition-colors group">
               <div className="text-5xl lg:text-6xl font-extrabold text-blue-600 mb-4 font-mono group-hover:scale-110 transition-transform">
-                {highlightInView ? <CountUp end={26} duration={2.5} suffix="+" /> : "0+"}
+                {highlightInView ? <CountUp end={12} duration={2.5} suffix="+" /> : "0+"}
               </div>
-              <p className="text-slate-600 font-semibold uppercase tracking-widest text-sm">Anos de Experiência</p>
+              <p className="text-slate-600 font-semibold uppercase tracking-widest text-sm">Anos de atuação</p>
             </motion.div>
             <motion.div variants={itemVariants} className="text-center p-10 rounded-3xl bg-white shadow-xl shadow-slate-200/50 border border-slate-100 hover:border-blue-200 transition-colors group">
               <div className="text-5xl lg:text-6xl font-extrabold text-blue-600 mb-4 font-mono group-hover:scale-110 transition-transform">
-                {highlightInView ? <CountUp end={500} duration={2.5} suffix="+" /> : "0+"}
+                {highlightInView ? <CountUp end={1000} duration={2.5} suffix="+" /> : "0+"}
               </div>
-              <p className="text-slate-600 font-semibold uppercase tracking-widest text-sm">Projetos Realizados</p>
+              <p className="text-slate-600 font-semibold uppercase tracking-widest text-sm">Projetos entregues em 2025</p>
             </motion.div>
             <motion.div variants={itemVariants} className="text-center p-10 rounded-3xl bg-white shadow-xl shadow-slate-200/50 border border-slate-100 hover:border-blue-200 transition-colors group">
               <div className="text-5xl lg:text-6xl font-extrabold text-blue-600 mb-4 font-mono group-hover:scale-110 transition-transform">
-                {highlightInView ? <CountUp end={300} duration={2.5} suffix="+" /> : "0+"}
+                {highlightInView ? <CountUp end={1} duration={2.5} suffix="" /> : "0"}
               </div>
-              <p className="text-slate-600 font-semibold uppercase tracking-widest text-sm">Clientes Atendidos</p>
+              <p className="text-slate-600 font-semibold uppercase tracking-widest text-sm">Atuação no RJ e em todo o Brasil</p>
             </motion.div>
           </motion.div>
         </div>
@@ -113,21 +113,21 @@ const Sobre = () => {
                 <Target className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Missão</h3>
-              <p className="text-slate-300 leading-relaxed">Ser referência no mercado, entregando qualidade, segurança e inovação em cada projeto executado.</p>
+              <p className="text-slate-300 leading-relaxed">Garantir soluções em engenharia elétrica que assegurem funcionamento contínuo, seguro e eficiente em qualquer tipo de operação.</p>
             </motion.div>
             <motion.div variants={itemVariants} className="flex flex-col items-center text-center p-8 rounded-3xl bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm hover:bg-slate-800 transition-colors">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-900/50 -rotate-3 hover:-rotate-6 transition-transform">
                 <Eye className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Visão</h3>
-              <p className="text-slate-300 leading-relaxed">Transformar desafios em oportunidades, sendo a escolha número um para soluções de engenharia complexas.</p>
+              <p className="text-slate-300 leading-relaxed">Ser referência nacional em engenharia elétrica aplicada a sistemas críticos e infraestrutura energética.</p>
             </motion.div>
             <motion.div variants={itemVariants} className="flex flex-col items-center text-center p-8 rounded-3xl bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm hover:bg-slate-800 transition-colors">
               <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-900/50 rotate-3 hover:rotate-6 transition-transform">
                 <Heart className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Valores</h3>
-              <p className="text-slate-300 leading-relaxed">Integridade, compromisso, foco no cliente, inovação contínua e paixão em tudo que fazemos.</p>
+              <p className="text-slate-300 leading-relaxed">Segurança, compromisso técnico, responsabilidade, inovação e excelência.</p>
             </motion.div>
           </motion.div>
         </div>

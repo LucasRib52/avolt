@@ -9,7 +9,8 @@ import {
   Droplets, 
   Mic2,
   ArrowRight,
-  Star
+  Star,
+  Factory
 } from "lucide-react";
 
 // Importando as imagens
@@ -23,58 +24,58 @@ import eventos from "../../assets/eventos.jpg";
 const Essencia = () => {
   const categories = [
     { 
-      title: "Sustentabilidade", 
-      icon: Leaf,
-      desc: "Soluções verdes para o amanhã.",
+      title: "Hospitais", 
+      icon: Stethoscope,
+      desc: "Infraestrutura elétrica para ambientes com operação contínua e crítica.",
       img: engenharia, 
-      link: "/sustentabilidade", 
+      link: "/saude", 
       span: "col-span-1 md:col-span-2 md:row-span-2",
-      color: "from-emerald-500/80 to-emerald-900/90"
+      color: "from-rose-500/80 to-rose-900/90"
     },
     { 
-      title: "Software", 
-      icon: MonitorPlay,
-      desc: "Automação digital inteligente.",
+      title: "Indústrias", 
+      icon: Factory,
+      desc: "Soluções para produtividade, proteção e performance energética.",
       img: data, 
-      link: "/software", 
+      link: "/servicos", 
       span: "col-span-1",
       color: "from-blue-500/80 to-blue-900/90"
     },
     { 
-      title: "Serviços", 
-      icon: Wrench,
-      desc: "Manutenção e suporte especializado.",
-      img: servicos, 
-      link: "/servicos", 
-      span: "col-span-1",
-      color: "from-orange-500/80 to-orange-900/90"
-    },
-    { 
-      title: "Setor da Saúde", 
-      icon: Stethoscope,
-      desc: "Confiabilidade para quem salva vidas.",
-      img: saude, 
-      link: "/saude", 
-      span: "col-span-1",
-      color: "from-rose-500/80 to-rose-900/90"
-    },
-    { 
-      title: "Saneamento", 
+      title: "Saneamento básico", 
       icon: Droplets,
-      desc: "Gestão hídrica de alta eficiência.",
-      img: saneamento, 
+      desc: "Confiabilidade para estações e sistemas de abastecimento.",
+      img: servicos, 
       link: "/saneamento", 
       span: "col-span-1",
       color: "from-cyan-500/80 to-cyan-900/90"
     },
     { 
-      title: "Painéis de Eventos", 
+      title: "Eventos de grande porte", 
       icon: Mic2,
-      desc: "Energia segura para grandes produções.",
-      img: eventos, 
+      desc: "Operação elétrica segura para produção e continuidade de eventos.",
+      img: saude, 
       link: "/eventos", 
-      span: "col-span-1 md:col-span-2",
+      span: "col-span-1",
       color: "from-indigo-500/80 to-indigo-900/90"
+    },
+    { 
+      title: "Comunidades", 
+      icon: Leaf,
+      desc: "Projetos que levam energia e infraestrutura para desenvolvimento local.",
+      img: saneamento, 
+      link: "/sustentabilidade", 
+      span: "col-span-1",
+      color: "from-emerald-500/80 to-emerald-900/90"
+    },
+    { 
+      title: "Mobilidade elétrica", 
+      icon: MonitorPlay,
+      desc: "Infraestrutura e suporte para expansão da mobilidade elétrica.",
+      img: eventos, 
+      link: "/servicos", 
+      span: "col-span-1 md:col-span-2",
+      color: "from-blue-500/80 to-blue-900/90"
     },
   ];
 
@@ -109,13 +110,13 @@ const Essencia = () => {
             className="max-w-2xl"
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm mb-6 border border-blue-200">
-              <Star size={16} /> Setores de Atuação
+              <Star size={16} /> ONDE ATUAMOS
             </span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
-              A <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">essência</span> do que fazemos
+              Setores em que entregamos engenharia de alta confiabilidade
             </h2>
             <p className="text-lg text-slate-600 font-light">
-              Nossa expertise se adapta aos mais diversos e exigentes mercados, levando inovação e performance onde você mais precisa.
+              Atuamos com soluções elétricas e de automação para operações críticas e infraestrutura essencial.
             </p>
           </motion.div>
         </div>

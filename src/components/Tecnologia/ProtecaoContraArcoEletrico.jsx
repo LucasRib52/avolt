@@ -62,7 +62,7 @@ const ProtecaoContraArcoEletrico = () => {
               </motion.h1>
               
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl">
-                Sistemas de detecção ultra-rápidos que atuam em milissegundos para salvar vidas e prevenir a destruição catastrófica de equipamentos.
+                Desenvolvemos soluções avançadas de proteção contra arco elétrico, priorizando a segurança de pessoas, equipamentos e da operação.
               </motion.p>
             </motion.div>
           </div>
@@ -116,10 +116,10 @@ const ProtecaoContraArcoEletrico = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-rose-500 to-orange-400 rounded-full"></div>
                 <div className="text-lg text-slate-600 leading-relaxed font-light space-y-4">
                   <p>
-                    O <strong>Arco Elétrico</strong> não avisa quando vai acontecer. Causado por falhas de isolação, ferramentas esquecidas ou poeira, ele libera em frações de segundo temperaturas tão altas quanto a superfície do sol.
+                    Nossos projetos seguem rigorosamente as normas técnicas e utilizam estudos específicos para identificar riscos, reduzir níveis de energia incidente e definir as melhores estratégias de mitigação.
                   </p>
                   <p>
-                    Quando isso ocorre, proteções térmicas convencionais e disjuntores magnéticos são lentos demais. Nossa tecnologia utiliza <strong>sensores ópticos sensíveis à luz e pressão</strong> para antecipar a curva de explosão e cortar a energia antes do desastre.
+                    Combinamos engenharia especializada, tecnologia e boas práticas para minimizar acidentes, paradas não programadas e danos ao sistema elétrico.
                   </p>
                 </div>
               </div>
@@ -147,10 +147,7 @@ const ProtecaoContraArcoEletrico = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-rose-400 rounded-full"></div>
                 <div className="text-lg text-slate-300 leading-relaxed font-light space-y-4">
                   <p>
-                    A implementação do sistema de arco não apenas salva vidas, como preserva o equipamento físico. Relés Arc Flash cortam o circuito em instantes, garantindo que o painel não sofra danos estruturais irreversíveis.
-                  </p>
-                  <p>
-                    Resultado: em caso de acidentes ou curtos, <strong>o retorno das operações (Downtime) cai de semanas para apenas algumas horas</strong>, permitindo que a limpeza e religamento ocorram com prejuízos nulos.
+                    Diferencial Avolt: foco absoluto em segurança, soluções personalizadas e engenharia que protege vidas e ativos críticos.
                   </p>
                 </div>
               </div>

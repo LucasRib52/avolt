@@ -106,7 +106,7 @@ const Momentos = () => {
             className="mb-8"
           >
             <span className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/10 text-white font-medium text-sm border border-white/20 backdrop-blur-md shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-              <Star className="h-4 w-4 text-amber-400 fill-amber-400" /> Histórias que inspiram
+              <Star className="h-4 w-4 text-amber-400 fill-amber-400" /> Momento de sucesso
             </span>
           </motion.div>
           
@@ -114,20 +114,27 @@ const Momentos = () => {
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight"
+            className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight"
           >
-            Nossos <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]">Casos de Sucesso</span>
+            Atuamos onde a engenharia é <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]">realmente colocada à prova.</span>
           </motion.h1>
           
-          <motion.p 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-slate-200 leading-relaxed font-light max-w-2xl mx-auto space-y-4"
           >
-            O sucesso da sua indústria é o nosso maior legado. Descubra como transformamos desafios complexos em resultados extraordinários.
-          </motion.p>
+            <p>Projetos que exigem:</p>
+            <div className="flex flex-wrap justify-center gap-3 mt-4">
+              <span className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm">operação contínua</span>
+              <span className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm">alta confiabilidade</span>
+              <span className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm">resposta rápida</span>
+              <span className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm">segurança técnica</span>
+            </div>
+            <p className="mt-8 text-2xl font-semibold text-white">Porque energia não pode falhar.</p>
+          </motion.div>
         </div>
       </section>
 

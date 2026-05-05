@@ -1,143 +1,134 @@
 import React from "react";
-import Slider from "react-slick";
-import "./Pages.css";
-
-// Importando a imagem de sustentabilidade
+import { motion } from "framer-motion";
+import { Leaf, Heart, Zap, BatteryCharging } from "lucide-react";
 import sustentabilidadeImg from "../../assets/engenharia.jpg";
+import Tecnologia from "../Tecnologia/Tecnologia";
 
 const Sustentabilidade = () => {
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    adaptiveHeight: true,
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80, damping: 20 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 }
+    }
   };
 
   return (
-    <div className="page-container">
-      <header className="sustainability-header">
-        <img
-          src={sustentabilidadeImg}
-          alt="Painéis de Sustentabilidade"
-          className="sustainability-image"
-        />
-        <div className="header-overlay">
-          <h1 className="header-title">Painéis de Sustentabilidade</h1>
-          <p className="header-subtitle">
-            A solução ideal para monitorar e gerenciar seus projetos de forma sustentável.
-          </p>
+    <div className="bg-slate-50 min-h-screen">
+      {/* Hero Section */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-slate-950">
+        <div className="absolute inset-0">
+          <motion.img 
+            initial={{ scale: 1.15 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 2, ease: "easeOut" }}
+            src={sustentabilidadeImg} 
+            alt="Sustentabilidade" 
+            className="w-full h-full object-cover filter brightness-[0.3] saturate-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-900/60 to-slate-50"></div>
+          
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-emerald-600/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-teal-500/20 rounded-full blur-[100px] pointer-events-none mix-blend-screen"></div>
         </div>
-      </header>
-
-      <main className="sustainability-main">
-        <section className="about-section">
-          <h2 className="section-title">O que são Painéis de Sustentabilidade?</h2>
-          <p className="section-content">
-            Os painéis de sustentabilidade são ferramentas visuais interativas
-            que fornecem dados em tempo real sobre os impactos ambientais,
-            sociais e econômicos de projetos e empresas. Eles ajudam a tomar
-            decisões estratégicas e a cumprir metas de sustentabilidade.
-          </p>
-        </section>
-
-        <section className="benefits-section">
-          <h2 className="section-title">Principais Benefícios</h2>
-          <div className="benefits-grid">
-            <div className="benefit-card">
-              <h3 className="card-title">Gestão Eficiente</h3>
-              <p className="card-content">
-                Monitore indicadores-chave de desempenho (KPIs) e otimize seus
-                processos com dados claros e objetivos.
-              </p>
-            </div>
-            <div className="benefit-card">
-              <h3 className="card-title">Conformidade Ambiental</h3>
-              <p className="card-content">
-                Certifique-se de que suas operações estão em conformidade com as
-                regulamentações ambientais.
-              </p>
-            </div>
-            <div className="benefit-card">
-              <h3 className="card-title">Transparência</h3>
-              <p className="card-content">
-                Compartilhe resultados e conquistas com stakeholders e clientes,
-                demonstrando seu compromisso com a sustentabilidade.
-              </p>
-            </div>
+        
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 mt-20">
+          <div className="container mx-auto max-w-4xl text-center">
+            <motion.div 
+              initial="hidden" 
+              animate="visible" 
+              variants={staggerContainer}
+            >
+              <motion.div variants={fadeInUp} className="mb-6">
+                <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-emerald-500/20 text-emerald-300 font-medium text-sm border border-emerald-500/30 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+                  <Leaf size={14} /> Sustentabilidade
+                </span>
+              </motion.div>
+              
+              <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]">
+                Engenharia com <br className="hidden md:block" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 drop-shadow-[0_0_30px_rgba(16,185,129,0.2)]">impacto</span>
+              </motion.h1>
+            </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="features-section">
-          <h2 className="section-title">Funcionalidades dos Painéis</h2>
-          <div className="features-list">
-            <div className="feature-item">
-              <h3 className="feature-title">Visualizações Gráficas</h3>
-              <p className="feature-content">
-                Gráficos interativos para análise de dados detalhada.
-              </p>
-            </div>
-            <div className="feature-item">
-              <h3 className="feature-title">Relatórios Automatizados</h3>
-              <p className="feature-content">
-                Relatórios gerados automaticamente para otimizar tempo e esforço.
-              </p>
-            </div>
-            <div className="feature-item">
-              <h3 className="feature-title">Customização Total</h3>
-              <p className="feature-content">
-                Personalize os painéis para atender às necessidades específicas
-                do seu negócio.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="interactive-section">
-          <h2 className="section-title">Como os Painéis Ajudam?</h2>
-          <div className="interactive-grid">
-            <div className="interactive-item">
-              <h3 className="interactive-title">Redução de Custos</h3>
-              <p className="interactive-content">
-                Identifique áreas de desperdício e reduza custos operacionais
-                com insights detalhados.
-              </p>
-            </div>
-            <div className="interactive-item">
-              <h3 className="interactive-title">Tomada de Decisão</h3>
-              <p className="interactive-content">
-                Acesse dados precisos para decisões estratégicas mais rápidas e
-                confiáveis.
-              </p>
-            </div>
-            <div className="interactive-item">
-              <h3 className="interactive-title">Impacto Positivo</h3>
-              <p className="interactive-content">
-                Melhore a percepção da sua empresa ao demonstrar impacto
-                ambiental positivo.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="gallery-section">
-          <h2 className="section-title">Galeria de Painéis de Sustentabilidade</h2>
-          <Slider {...sliderSettings}>
-            {Array(3).fill(0).map((_, index) => (
-              <div className="gallery-item" key={index}>
-                <img
-                  src={sustentabilidadeImg}
-                  alt={`Painel ${index + 1}`}
-                  className="gallery-image"
-                />
+      {/* Conteúdo Principal */}
+      <section className="py-24 relative z-20 -mt-16 container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.8 }}
+          className="bg-white/90 backdrop-blur-2xl rounded-[2rem] p-8 md:p-16 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-white max-w-5xl mx-auto"
+        >
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="md:w-1/3 flex justify-center">
+              <div className="w-32 h-32 rounded-full bg-emerald-50 flex items-center justify-center">
+                <Heart className="w-16 h-16 text-emerald-500" />
               </div>
-            ))}
-          </Slider>
-        </section>
-      </main>
+            </div>
+            <div className="md:w-2/3 space-y-6">
+              <h2 className="text-3xl font-bold text-slate-900">Acreditamos que a engenharia também tem papel social.</h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full"></div>
+              <p className="text-xl text-slate-600 leading-relaxed font-light">
+                Atuamos em projetos que levam energia e infraestrutura para comunidades, contribuindo para desenvolvimento e qualidade de vida.
+              </p>
+              <p className="text-xl text-slate-600 leading-relaxed font-light">
+                Além disso, investimos em soluções voltadas para eficiência energética e mobilidade elétrica.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Grid de Atuação */}
+      <section className="pb-24 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+                <Zap size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Eficiência Energética</h3>
+              <p className="text-slate-600 leading-relaxed font-light">
+                Projetos desenvolvidos para otimizar o consumo, reduzir desperdícios e promover o uso inteligente dos recursos energéticos.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+                <BatteryCharging size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Mobilidade Elétrica</h3>
+              <p className="text-slate-600 leading-relaxed font-light">
+                Infraestrutura completa para carregamento de veículos elétricos, apoiando a transição para um futuro mais limpo.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <div className="bg-slate-50 border-t border-slate-200">
+        <Tecnologia />
+      </div>
     </div>
   );
 };

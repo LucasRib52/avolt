@@ -62,7 +62,7 @@ const Retrofit = () => {
               </motion.h1>
               
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light max-w-3xl">
-                Modernize seus equipamentos antigos, estenda a vida útil da sua planta e reduza custos operacionais drasticamente sem a necessidade de comprar sistemas inteiramente novos.
+                O serviço de Retrofit da Avolt moderniza sistemas elétricos existentes, aumentando a segurança, eficiência e vida útil dos equipamentos.
               </motion.p>
             </motion.div>
           </div>
@@ -116,10 +116,10 @@ const Retrofit = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full"></div>
                 <div className="text-lg text-slate-600 leading-relaxed font-light space-y-4">
                   <p>
-                    O <strong>Retrofit</strong> consiste na atualização e modernização de equipamentos elétricos antigos (como disjuntores, relés e chaves) por tecnologias de última geração, mantendo rigorosamente a estrutura mecânica existente da sua planta.
+                    Avaliamos o sistema atual, identificamos pontos críticos e implementamos melhorias tecnológicas e normativas.
                   </p>
                   <p>
-                    Ao invés de gastar milhões com a substituição completa de um painel, nós projetamos gavetas e disjuntores adaptados em 3D que se encaixam perfeitamente nos seus cubículos originais. 
+                    O resultado é a adequação às normas vigentes, redução de falhas, melhoria de performance e otimização de custos operacionais.
                   </p>
                 </div>
               </div>
@@ -147,10 +147,7 @@ const Retrofit = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-amber-300 rounded-full"></div>
                 <div className="text-lg text-slate-300 leading-relaxed font-light space-y-4">
                   <p>
-                    Com o passar das décadas, componentes originais saem de linha. Quando eles falham, a reposição é lenta e custosa.
-                  </p>
-                  <p>
-                    O Retrofit não apenas resolve a dor das peças de reposição escassas, mas traz a sua planta para o padrão atual de conectividade da Indústria 4.0. Inserimos proteções digitais que permitem o <strong>monitoramento remoto</strong> e integração com o sistema de controle da fábrica.
+                    Diferencial Avolt: modernização inteligente, redução de custos e atualização técnica com mínimo impacto na operação.
                   </p>
                 </div>
               </div>

@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  Leaf, 
-  MonitorPlay, 
-  Wrench, 
-  Stethoscope, 
-  Droplets, 
+import {
+  Leaf,
+  Wrench,
+  Stethoscope,
+  Droplets,
   Mic2,
   ArrowRight,
   Star,
-  Factory
+  Building2,
 } from "lucide-react";
 
 // Importando as imagens
@@ -23,59 +22,59 @@ import eventos from "../../assets/eventos.jpg";
 
 const Essencia = () => {
   const categories = [
-    { 
-      title: "Hospitais", 
+    {
+      title: "Setor da Saúde",
       icon: Stethoscope,
       desc: "Infraestrutura elétrica para ambientes com operação contínua e crítica.",
-      img: engenharia, 
-      link: "/saude", 
-      span: "col-span-1 md:col-span-2 md:row-span-2",
-      color: "from-rose-500/80 to-rose-900/90"
+      img: saude,
+      link: "/saude",
+      span: "col-span-1 sm:col-span-2 md:col-span-3 md:row-span-2",
+      color: "from-rose-500/80 to-rose-900/90",
     },
-    { 
-      title: "Indústrias", 
-      icon: Factory,
-      desc: "Soluções para produtividade, proteção e performance energética.",
-      img: data, 
-      link: "/servicos", 
-      span: "col-span-1",
-      color: "from-blue-500/80 to-blue-900/90"
+    {
+      title: "Building",
+      icon: Building2,
+      desc: "Grandes empreendimentos, edificações e infraestrutura elétrica em escala urbana.",
+      img: data,
+      link: "/building",
+      span: "col-span-1 md:col-span-3 md:row-span-1 md:col-start-4 md:row-start-1",
+      color: "from-blue-500/80 to-blue-900/90",
     },
-    { 
-      title: "Saneamento básico", 
+    {
+      title: "Serviços",
+      icon: Wrench,
+      desc: "Engenharia, montagem, comissionamento e suporte ao ciclo de vida.",
+      img: servicos,
+      link: "/servicos",
+      span: "col-span-1 md:col-span-3 md:row-span-1 md:col-start-4 md:row-start-2",
+      color: "from-amber-500/80 to-amber-900/90",
+    },
+    {
+      title: "Sustentabilidade",
+      icon: Leaf,
+      desc: "Eficiência energética, integração com renováveis e menor impacto operacional.",
+      img: engenharia,
+      link: "/sustentabilidade",
+      span: "col-span-1 md:col-span-2 md:row-start-3 md:col-start-1",
+      color: "from-emerald-500/80 to-emerald-900/90",
+    },
+    {
+      title: "Saneamento",
       icon: Droplets,
-      desc: "Confiabilidade para estações e sistemas de abastecimento.",
-      img: servicos, 
-      link: "/saneamento", 
-      span: "col-span-1",
-      color: "from-cyan-500/80 to-cyan-900/90"
+      desc: "Confiabilidade para estações e sistemas de abastecimento e tratamento.",
+      img: saneamento,
+      link: "/saneamento",
+      span: "col-span-1 md:col-span-2 md:row-start-3 md:col-start-3",
+      color: "from-cyan-500/80 to-cyan-900/90",
     },
-    { 
-      title: "Eventos de grande porte", 
+    {
+      title: "Painéis de Eventos",
       icon: Mic2,
       desc: "Operação elétrica segura para produção e continuidade de eventos.",
-      img: saude, 
-      link: "/eventos", 
-      span: "col-span-1",
-      color: "from-indigo-500/80 to-indigo-900/90"
-    },
-    { 
-      title: "Comunidades", 
-      icon: Leaf,
-      desc: "Projetos que levam energia e infraestrutura para desenvolvimento local.",
-      img: saneamento, 
-      link: "/sustentabilidade", 
-      span: "col-span-1",
-      color: "from-emerald-500/80 to-emerald-900/90"
-    },
-    { 
-      title: "Mobilidade elétrica", 
-      icon: MonitorPlay,
-      desc: "Infraestrutura e suporte para expansão da mobilidade elétrica.",
-      img: eventos, 
-      link: "/servicos", 
-      span: "col-span-1 md:col-span-2",
-      color: "from-blue-500/80 to-blue-900/90"
+      img: eventos,
+      link: "/eventos",
+      span: "col-span-1 md:col-span-2 md:row-start-3 md:col-start-5",
+      color: "from-indigo-500/80 to-indigo-900/90",
     },
   ];
 
@@ -126,14 +125,14 @@ const Essencia = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-3 gap-5 md:h-[650px]"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 grid-rows-none md:grid-rows-3 gap-5 md:h-[650px]"
         >
-          {categories.map((category, index) => {
+          {categories.map((category) => {
             const Icon = category.icon;
             return (
               <motion.div
                 variants={itemVariants}
-                key={index}
+                key={category.link}
                 className={`${category.span} h-[250px] md:h-auto`}
               >
                 <Link

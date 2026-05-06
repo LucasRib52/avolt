@@ -11,6 +11,8 @@ import Footer from "./components/Footer/Footer";
 
 // Importando as páginas específicas
 import BaixaTensao from "./components/Painel/BaixaTensao";
+import MediaTensao from "./components/Painel/MediaTensao";
+import MissaoCritica from "./components/Painel/MissaoCritica";
 import Contato from "./components/Contato/Contato";
 import Sobre from "./components/Sobre/Sobre";
 import Momentos from "./components/Momentos/Momentos";
@@ -29,6 +31,7 @@ import Sustentabilidade from "./components/Essencia/Sustentabilidade";
 import Software from "./components/Essencia/Software";
 import Servicos from "./components/Essencia/Servicos";
 import SetorSaude from "./components/Essencia/SetorSaude";
+import BuildingPage from "./components/Essencia/Building";
 import Saneamento from "./components/Essencia/Saneamento";
 import PaineisEventos from "./components/Essencia/PaineisEventos";
 
@@ -52,6 +55,10 @@ function App() {
           }
         />
         <Route path="/baixa-tensao" element={<BaixaTensao />} />
+        <Route path="/media-tensao" element={<MediaTensao />} />
+        <Route path="/missao-critica" element={<MissaoCritica />} />
+        <Route path="/projetos" element={<Projetos />} />
+        <Route path="/building" element={<BuildingPage />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/momentos" element={<Momentos />} />

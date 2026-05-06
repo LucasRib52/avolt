@@ -25,7 +25,7 @@ const Tecnologia = () => {
   };
 
   return (
-    <section className="py-24 bg-slate-900 relative overflow-hidden">
+    <section className="relative overflow-hidden bg-slate-900 pt-24 pb-16 sm:pb-20">
       {/* Abstract Background Elements */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
@@ -89,6 +89,11 @@ const Tecnologia = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        <div
+          className="mx-auto mt-14 h-px max-w-5xl bg-gradient-to-r from-transparent via-slate-500/45 to-transparent px-4 sm:px-6"
+          aria-hidden
+        />
       </div>
     </section>
   );

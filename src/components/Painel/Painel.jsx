@@ -1,155 +1,132 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Zap, ShieldAlert, Cpu, Activity } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import imgTeste from "../../assets/imgteste.jpg";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { SERVICO_LINHAS } from "@/data/servicoLinhas";
 
 const Painel = () => {
-  const navigate = useNavigate();
-
-  const items = [
-    {
-      title: "Distribuição e Controle de Energia",
-      icon: Zap,
-      description: [
-        "Painéis de baixa tensão, média tensão e QGBT",
-        "Quadros de distribuição e painéis de transferência (ATS)",
-        "Painéis multimedidores",
-        "Painéis e quadros de comando",
-      ],
-      image: imgTeste,
-      route: "/baixa-tensao",
-    },
-    {
-      title: "Acionamento de Motores e CCM",
-      icon: Activity,
-      description: [
-        "Centros de Controle de Motores (CCM)",
-        "CCM inteligente e painéis para acionamento de motores",
-        "Inversores de frequência",
-        "Soft starters",
-      ],
-      image: imgTeste,
-      route: "/servicos",
-    },
-    {
-      title: "Automação e Telemetria",
-      icon: ShieldAlert,
-      description: [
-        "Painéis de automação",
-        "Aplicação de CLP e IHM",
-        "Sistemas de telemetria e monitoramento remoto",
-        "Integração de sistemas",
-      ],
-      image: imgTeste,
-      route: "/automacao-e-telemetria",
-    },
-    {
-      title: "Infraestrutura, Comunicação e Energia Especial",
-      icon: Cpu,
-      description: [
-        "Painéis de proteção e controle de geradores",
-        "Painéis de servidores e carregadores para veículos elétricos",
-        "Laudos técnicos",
-        "Confecção e terminação de cabos ópticos (DGO)",
-      ],
-      image: imgTeste,
-      route: "/servicos",
-    },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.15 } }
+    show: { opacity: 1, transition: { staggerChildren: 0.08 } },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    hidden: { opacity: 0, y: 32 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
-      {/* Decoração de fundo */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[100px] opacity-60 pointer-events-none transform translate-x-1/2 -translate-y-1/2"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
-            <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-600 font-semibold text-sm mb-4 border border-blue-200">
+    <section className="relative overflow-hidden bg-slate-50 py-24">
+      <div className="pointer-events-none absolute top-0 right-0 h-[500px] w-[500px] translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-100 opacity-60 blur-[100px]" />
+
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-16 max-w-3xl text-center md:mb-20">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+          >
+            <span className="mb-4 inline-block rounded-full border border-blue-200 bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-600">
               Nossas Especialidades
             </span>
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 }}
+            className="mb-6 text-3xl font-bold tracking-tight text-slate-900 md:text-5xl"
           >
             SERVIÇOS
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-600 leading-relaxed"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg leading-relaxed text-slate-600 md:text-xl"
           >
             Soluções completas em engenharia elétrica para diferentes segmentos.
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-10"
         >
-          {items.map((item, index) => (
-            <motion.div variants={itemVariants} key={index} className="bg-white rounded-3xl p-1 shadow-lg shadow-slate-200/50 border border-slate-100 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 group flex flex-col h-full">
-              <div className="h-56 rounded-[20px] overflow-hidden relative mb-6">
+          {SERVICO_LINHAS.map((service) => (
+            <motion.article
+              variants={itemVariants}
+              key={service.id}
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-md transition-all duration-300 hover:border-blue-100 hover:shadow-lg"
+            >
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
                 <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src={service.image}
+                  alt={service.imageAlt}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-3 rounded-2xl">
-                  <item.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">
-                  {item.title}
-                </h3>
               </div>
-              
-              <div className="px-6 pb-6 flex-grow flex flex-col justify-between">
-                <ul className="space-y-4 mb-8">
-                  {item.description.map((desc, i) => (
-                    <li key={i} className="flex items-start text-slate-600">
-                      <div className="mt-1 w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center mr-3 shrink-0">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-blue-600" />
-                      </div>
-                      <span className="text-sm font-medium leading-relaxed">{desc}</span>
+              <div className="flex flex-1 flex-col px-5 pb-5 pt-4 text-center sm:px-6">
+                <h3 className="mb-3 text-base font-bold uppercase tracking-wide text-blue-900 sm:text-lg">
+                  {service.title}
+                </h3>
+                <ul className="mb-6 flex flex-1 flex-col gap-2 text-sm text-slate-600">
+                  {service.items.map((line) => (
+                    <li
+                      key={line}
+                      className="flex items-start justify-center gap-2 text-left sm:justify-start sm:pl-1"
+                    >
+                      <span
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"
+                        aria-hidden
+                      />
+                      <span className="leading-snug">{line}</span>
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  onClick={() => navigate(item.route)}
-                  className="w-full bg-slate-50 hover:bg-blue-600 text-slate-900 hover:text-white transition-all duration-300 group/btn rounded-xl py-6 border border-slate-200 hover:border-transparent"
+                <Link
+                  to={service.to}
+                  className={cn(
+                    buttonVariants({ variant: "outline" }),
+                    "h-auto min-h-12 w-full justify-center rounded-xl border-slate-200 bg-slate-50 py-6 text-base text-slate-900 hover:border-transparent hover:bg-blue-700 hover:text-white"
+                  )}
                 >
-                  Conhecer serviço
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                </Button>
+                  Saiba mais
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </motion.div>
 
-        <div className="mt-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center"
+        >
           <Button
-            onClick={() => navigate("/servicos")}
-            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6"
+            asChild
+            className="rounded-full bg-blue-700 px-8 py-6 text-white hover:bg-blue-800"
           >
-            Conheça todos os serviços
+            <Link to="/servicos">
+              Conheça todos os serviços
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
